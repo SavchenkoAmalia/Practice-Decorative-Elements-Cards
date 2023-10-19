@@ -10,6 +10,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--body-color);
+    
 }
 
 .container {
@@ -43,12 +44,16 @@ body {
 }
 
 .cards-home-list {
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .cards-home-item {
+    flex: 0 1 calc((100% - 30px * 2) / 3);
     border-radius: 30px;
     overflow: hidden;
+    box-shadow: 2px 2px 0px 5px rgba( 0, 0, 0, 0.75) ;
 }
 
 .cards-home-head {
@@ -91,14 +96,15 @@ body {
 /*! Card body */
 
 .cards-home-body {
-    background-color: var(--white-color);
-   padding: 30px;
 }
 
 .card-body {
+   background-color:var(--white-color) ;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
+    align-items: center;
+    padding: 30px;
 }
 
 .card-body-dates {
@@ -121,4 +127,16 @@ body {
     height: 1px;
     width: 50%;
     background-color: var(--grey-color);
+}
+
+.cards-home-button {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    padding: 20px 30px;
+    border-radius: 20px;
+    transition: backround-color 0.3s ease 0s ;
+}
+
+.cards-home-button:hover {
+    background-color: var(--hover-blue-color);
 }
